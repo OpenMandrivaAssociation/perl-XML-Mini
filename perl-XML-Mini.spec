@@ -15,7 +15,6 @@ Source:         http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.t
 Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 XML::Mini is a set of Perl classes that allow you to access XML data and create
