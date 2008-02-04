@@ -1,7 +1,7 @@
 %define module  XML-Mini
 %define name    perl-%{module}
-%define version 1.2.8
-%define release %mkrel 7
+%define version 1.36
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
