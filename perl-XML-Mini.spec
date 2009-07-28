@@ -1,21 +1,21 @@
-%define module  XML-Mini
-%define name    perl-%{module}
-%define version 1.38
-%define release %mkrel 5
+%define upstream_name    XML-Mini
+%define upstream_version 1.38
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Perl implementation of the XML::Mini XML create/parse interface
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}/
-Source:         http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}/
+Source0:        http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
-BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 XML::Mini is a set of Perl classes that allow you to access XML data and create
@@ -24,7 +24,7 @@ both Perl and PHP implementations.
 
 %prep
 
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,4 +47,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/XML/Mini/*.pm
 %{perl_vendorlib}/XML/Mini/Element/*.pm
 %{_mandir}/man3*/*
-
