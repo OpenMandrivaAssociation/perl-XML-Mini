@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Perl implementation of the XML::Mini XML create/parse interface
 License:	GPL+ or Artistic
