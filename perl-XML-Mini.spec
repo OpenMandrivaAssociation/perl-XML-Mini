@@ -2,14 +2,14 @@
 %define upstream_version 1.38
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Perl implementation of the XML::Mini XML create/parse interface
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/XML-Mini
+Source0:	https://cpan.metacpan.org/authors/id/P/PD/PDEEGAN/XML-Mini-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
