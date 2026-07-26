@@ -1,15 +1,13 @@
 %define upstream_name    XML-Mini
-%define upstream_version 1.38
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	1.38
+Release:	6
 
 Summary:	Perl implementation of the XML::Mini XML create/parse interface
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/XML-Mini
-Source0:	https://cpan.metacpan.org/authors/id/P/PD/PDEEGAN/XML-Mini-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PD/PDEEGAN/XML-Mini-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ valid XML output with a tree-based hierarchy of elements. The MiniXML API has
 both Perl and PHP implementations.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -43,9 +41,7 @@ make test
 %changelog
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.380.0-1mdv2010.0
 + Revision: 401859
-- rebuild using %%perl_convert_version
-
-* Fri Mar 06 2009 Antoine Ginies <aginies@mandriva.com> 1.38-5mdv2009.1
+- rebuild using %1.38 Fri Mar 06 2009 Antoine Ginies <aginies@mandriva.com> 1.38-5mdv2009.1
 + Revision: 350216
 - 2009.1 rebuild
 
